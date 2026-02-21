@@ -1,0 +1,827 @@
+---
+const title = "DevOps World — Tu Guía Esencial";
+---
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles/global.css" />
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="navbar">
+  <div class="nav-inner">
+    <a href="#hero" class="nav-logo">⚡ DevOps<span>World</span></a>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#roadmap">Roadmap</a></li>
+      <li><a href="#lenguajes">Lenguajes</a></li>
+      <li><a href="#cloud">Cloud</a></li>
+      <li><a href="#cloudflare">Cloudflare</a></li>
+      <li><a href="#cicd">CI/CD</a></li>
+      <li><a href="#contenedores">Contenedores</a></li>
+      <li><a href="#noticias">Noticias</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <div class="hero-badge">🚀 Tu guía esencial al mundo moderno</div>
+    <h1 class="hero-title">Domina el <span class="gradient-text">DevOps</span><br/>desde cero</h1>
+    <p class="hero-sub">Todo lo esencial para entrar al mundo DevOps: herramientas, comparativas, servicios cloud y las últimas noticias tech. Sin relleno, solo lo que necesitas.</p>
+    <div class="hero-ctas">
+      <a href="#roadmap" class="btn-primary">Comenzar Roadmap</a>
+      <a href="#lenguajes" class="btn-ghost">Ver Comparativas</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><span class="stat-num" data-target="12">0</span><span class="stat-label">Herramientas esenciales</span></div>
+      <div class="stat"><span class="stat-num" data-target="8">0</span><span class="stat-label">Servicios Cloudflare</span></div>
+      <div class="stat"><span class="stat-num" data-target="5">0</span><span class="stat-label">Áreas clave DevOps</span></div>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="orbit-ring ring-1"></div>
+    <div class="orbit-ring ring-2"></div>
+    <div class="orbit-ring ring-3"></div>
+    <div class="orbit-center">⚙️</div>
+    <div class="orbit-item item-1">🐳</div>
+    <div class="orbit-item item-2">☸️</div>
+    <div class="orbit-item item-3">🔧</div>
+    <div class="orbit-item item-4">☁️</div>
+    <div class="orbit-item item-5">🔄</div>
+    <div class="orbit-item item-6">🛡️</div>
+  </div>
+</section>
+
+<!-- ROADMAP -->
+<section class="section" id="roadmap">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Guía esencial</span>
+      <h2>Roadmap <span class="gradient-text">DevOps</span></h2>
+      <p>Los 5 pilares que necesitas dominar, en orden lógico</p>
+    </div>
+    <div class="roadmap-grid">
+      <div class="road-card" data-step="01">
+        <div class="road-icon">💻</div>
+        <h3>Fundamentos Linux & Redes</h3>
+        <ul class="road-list">
+          <li>Comandos esenciales de terminal</li>
+          <li>Permisos, procesos, systemd</li>
+          <li>TCP/IP, DNS, HTTP/HTTPS</li>
+          <li>SSH y gestión de servidores</li>
+        </ul>
+        <div class="road-tools">
+          <span>Bash</span><span>Ubuntu</span><span>Vim</span>
+        </div>
+      </div>
+      <div class="road-card" data-step="02">
+        <div class="road-icon">📦</div>
+        <h3>Contenedores</h3>
+        <ul class="road-list">
+          <li>Docker: imágenes y contenedores</li>
+          <li>Docker Compose para multi-servicios</li>
+          <li>Registros de imágenes (DockerHub, ECR)</li>
+          <li>Kubernetes para orquestación</li>
+        </ul>
+        <div class="road-tools">
+          <span>Docker</span><span>K8s</span><span>Helm</span>
+        </div>
+      </div>
+      <div class="road-card" data-step="03">
+        <div class="road-icon">🔄</div>
+        <h3>CI/CD Pipelines</h3>
+        <ul class="road-list">
+          <li>Git flow y estrategias de branching</li>
+          <li>Automatizar build, test y deploy</li>
+          <li>GitHub Actions / GitLab CI</li>
+          <li>Artefactos y ambientes</li>
+        </ul>
+        <div class="road-tools">
+          <span>GitHub Actions</span><span>GitLab CI</span>
+        </div>
+      </div>
+      <div class="road-card" data-step="04">
+        <div class="road-icon">☁️</div>
+        <h3>Cloud & Infraestructura</h3>
+        <ul class="road-list">
+          <li>IaC con Terraform / Pulumi</li>
+          <li>Servicios cloud (EC2, S3, Lambda)</li>
+          <li>Redes VPC, subnets, firewalls</li>
+          <li>Cloudflare como edge platform</li>
+        </ul>
+        <div class="road-tools">
+          <span>AWS</span><span>Terraform</span><span>Cloudflare</span>
+        </div>
+      </div>
+      <div class="road-card" data-step="05">
+        <div class="road-icon">📊</div>
+        <h3>Observabilidad</h3>
+        <ul class="road-list">
+          <li>Logs centralizados (ELK, Loki)</li>
+          <li>Métricas con Prometheus + Grafana</li>
+          <li>Alertas y SLOs/SLAs</li>
+          <li>Trazabilidad distribuida</li>
+        </ul>
+        <div class="road-tools">
+          <span>Grafana</span><span>Prometheus</span><span>Datadog</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LENGUAJES & FRAMEWORKS -->
+<section class="section section-dark" id="lenguajes">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Comparativas</span>
+      <h2>Lenguajes & <span class="gradient-text">Frameworks</span></h2>
+      <p>Elige con criterio. Aquí lo esencial de cada opción</p>
+    </div>
+
+    <div class="tabs" id="lang-tabs">
+      <button class="tab active" data-tab="backend">Backend</button>
+      <button class="tab" data-tab="frontend">Frontend</button>
+      <button class="tab" data-tab="infra">IaC / Scripts</button>
+    </div>
+
+    <div class="tab-content active" id="tab-backend">
+      <div class="table-wrapper">
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th>Lenguaje</th>
+              <th>Velocidad</th>
+              <th>Curva aprendizaje</th>
+              <th>Ecosistema</th>
+              <th>Uso en DevOps</th>
+              <th>Cuándo usarlo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="lang-badge python">🐍 Python</span></td>
+              <td><div class="bar-wrap"><div class="bar" style="width:60%"></div></div></td>
+              <td><span class="tag green">Fácil</span></td>
+              <td><span class="tag gold">Enorme</span></td>
+              <td>Scripts, automaciones, ML, APIs</td>
+              <td>Automatización, scripting, IA/ML</td>
+            </tr>
+            <tr>
+              <td><span class="lang-badge go">🔵 Go</span></td>
+              <td><div class="bar-wrap"><div class="bar" style="width:90%"></div></div></td>
+              <td><span class="tag yellow">Media</span></td>
+              <td><span class="tag blue">Sólido</span></td>
+              <td>CLIs, microservicios, infra tools</td>
+              <td>Herramientas DevOps (Docker, K8s están en Go)</td>
+            </tr>
+            <tr>
+              <td><span class="lang-badge rust">🦀 Rust</span></td>
+              <td><div class="bar-wrap"><div class="bar" style="width:98%"></div></div></td>
+              <td><span class="tag red">Difícil</span></td>
+              <td><span class="tag blue">Creciente</span></td>
+              <td>Workers de Cloudflare, sistemas</td>
+              <td>Máximo rendimiento, WebAssembly</td>
+            </tr>
+            <tr>
+              <td><span class="lang-badge node">🟩 Node.js</span></td>
+              <td><div class="bar-wrap"><div class="bar" style="width:75%"></div></div></td>
+              <td><span class="tag green">Fácil</span></td>
+              <td><span class="tag gold">Enorme</span></td>
+              <td>APIs, serverless, Workers</td>
+              <td>Full-stack JS, APIs rápidas, edge computing</td>
+            </tr>
+            <tr>
+              <td><span class="lang-badge java">☕ Java/Kotlin</span></td>
+              <td><div class="bar-wrap"><div class="bar" style="width:80%"></div></div></td>
+              <td><span class="tag yellow">Media</span></td>
+              <td><span class="tag gold">Enorme</span></td>
+              <td>Microservicios empresariales</td>
+              <td>Apps empresariales, Spring Boot, Android</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="tab-content" id="tab-frontend">
+      <div class="table-wrapper">
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th>Framework</th>
+              <th>Rendimiento</th>
+              <th>Curva aprendizaje</th>
+              <th>Comunidad</th>
+              <th>Ideal para</th>
+              <th>Empresas que lo usan</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="lang-badge react">⚛️ React</span></td>
+              <td><div class="bar-wrap"><div class="bar" style="width:80%"></div></div></td>
+              <td><span class="tag yellow">Media</span></td>
+              <td><span class="tag gold">Enorme</span></td>
+              <td>SPAs, apps complejas</td>
+              <td>Meta, Airbnb, Netflix</td>
+            </tr>
+            <tr>
+              <td><span class="lang-badge vue">💚 Vue</span></td>
+              <td><div class="bar-wrap"><div class="bar" style="width:82%"></div></div></td>
+              <td><span class="tag green">Fácil</span></td>
+              <td><span class="tag blue">Grande</span></td>
+              <td>Apps medianas, migración gradual</td>
+              <td>Alibaba, Xiaomi, Laravel</td>
+            </tr>
+            <tr>
+              <td><span class="lang-badge svelte">🔶 Svelte</span></td>
+              <td><div class="bar-wrap"><div class="bar" style="width:95%"></div></div></td>
+              <td><span class="tag green">Fácil</span></td>
+              <td><span class="tag yellow">Media</span></td>
+              <td>Apps rápidas, pocos KB</td>
+              <td>The New York Times, Spotify</td>
+            </tr>
+            <tr>
+              <td><span class="lang-badge astro">🚀 Astro</span></td>
+              <td><div class="bar-wrap"><div class="bar" style="width:98%"></div></div></td>
+              <td><span class="tag green">Fácil</span></td>
+              <td><span class="tag blue">Creciente</span></td>
+              <td>Sites estáticos, blogs, docs</td>
+              <td>Ideal para Cloudflare Pages</td>
+            </tr>
+            <tr>
+              <td><span class="lang-badge angular">🔴 Angular</span></td>
+              <td><div class="bar-wrap"><div class="bar" style="width:72%"></div></div></td>
+              <td><span class="tag red">Difícil</span></td>
+              <td><span class="tag gold">Enorme</span></td>
+              <td>Apps empresariales grandes</td>
+              <td>Google, Microsoft, SAP</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="tab-content" id="tab-infra">
+      <div class="table-wrapper">
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th>Herramienta</th>
+              <th>Tipo</th>
+              <th>Proveedores</th>
+              <th>Lenguaje config</th>
+              <th>Ideal para</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="lang-badge terraform">🏗️ Terraform</span></td>
+              <td><span class="tag blue">IaC declarativo</span></td>
+              <td>AWS, GCP, Azure, CF...</td>
+              <td>HCL</td>
+              <td>Infra multi-cloud, estándar de la industria</td>
+            </tr>
+            <tr>
+              <td><span class="lang-badge pulumi">🌊 Pulumi</span></td>
+              <td><span class="tag blue">IaC imperativo</span></td>
+              <td>AWS, GCP, Azure, CF...</td>
+              <td>Python/JS/Go/TS</td>
+              <td>Devs que prefieren código real sobre HCL</td>
+            </tr>
+            <tr>
+              <td><span class="lang-badge ansible">🔴 Ansible</span></td>
+              <td><span class="tag yellow">Config Mgmt</span></td>
+              <td>Cualquier servidor SSH</td>
+              <td>YAML</td>
+              <td>Configurar servidores, automatizar tareas</td>
+            </tr>
+            <tr>
+              <td><span class="lang-badge bash">💲 Bash/Python</span></td>
+              <td><span class="tag green">Scripting</span></td>
+              <td>Universal</td>
+              <td>Bash / Python</td>
+              <td>Automatizaciones simples, glue code</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CLOUD COMPARISON -->
+<section class="section" id="cloud">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Cloud Providers</span>
+      <h2>AWS vs GCP vs Azure vs <span class="gradient-text">Cloudflare</span></h2>
+      <p>Cuándo usar cada uno y en qué se diferencian</p>
+    </div>
+    <div class="cloud-grid">
+      <div class="cloud-card aws">
+        <div class="cloud-logo">☁️</div>
+        <h3>AWS</h3>
+        <div class="cloud-score">
+          <span class="score-label">Market Share</span>
+          <div class="score-bar"><div style="width:33%"></div></div>
+          <span>33%</span>
+        </div>
+        <ul class="cloud-pros">
+          <li>✅ Mayor ecosistema (200+ servicios)</li>
+          <li>✅ Más proveedores de trabajo lo piden</li>
+          <li>✅ Lambda, S3, EC2 son estándar</li>
+          <li>⚠️ Pricing complejo</li>
+          <li>⚠️ Curva de aprendizaje alta</li>
+        </ul>
+        <div class="cloud-use">Ideal: Empresas medianas-grandes, workloads tradicionales</div>
+      </div>
+      <div class="cloud-card gcp">
+        <div class="cloud-logo">🔵</div>
+        <h3>Google Cloud</h3>
+        <div class="cloud-score">
+          <span class="score-label">Market Share</span>
+          <div class="score-bar"><div style="width:11%"></div></div>
+          <span>11%</span>
+        </div>
+        <ul class="cloud-pros">
+          <li>✅ Líder en Kubernetes (GKE)</li>
+          <li>✅ BigQuery para data analytics</li>
+          <li>✅ IA/ML con Vertex AI</li>
+          <li>⚠️ Menos servicios que AWS</li>
+          <li>⚠️ Soporte empresarial menor</li>
+        </ul>
+        <div class="cloud-use">Ideal: IA/ML, data analytics, startups tech</div>
+      </div>
+      <div class="cloud-card azure">
+        <div class="cloud-logo">🪟</div>
+        <h3>Azure</h3>
+        <div class="cloud-score">
+          <span class="score-label">Market Share</span>
+          <div class="score-bar"><div style="width:22%"></div></div>
+          <span>22%</span>
+        </div>
+        <ul class="cloud-pros">
+          <li>✅ Integración perfecta con Microsoft</li>
+          <li>✅ Active Directory y .NET nativos</li>
+          <li>✅ Fuerte en empresas con Office 365</li>
+          <li>⚠️ UX menos intuitiva</li>
+          <li>⚠️ Más difícil para startups</li>
+        </ul>
+        <div class="cloud-use">Ideal: Empresas con stack Microsoft, gobierno</div>
+      </div>
+      <div class="cloud-card cloudflare featured">
+        <div class="cloud-logo">🧡</div>
+        <h3>Cloudflare</h3>
+        <div class="cloud-badge-featured">⚡ Edge Platform</div>
+        <ul class="cloud-pros">
+          <li>✅ Red global en 300+ ciudades</li>
+          <li>✅ Workers en el borde (0ms cold start)</li>
+          <li>✅ Pricing transparente y barato</li>
+          <li>✅ DDoS, CDN, DNS incluidos</li>
+          <li>✅ Plan gratuito muy generoso</li>
+        </ul>
+        <div class="cloud-use">Ideal: Sites, APIs edge, apps serverless modernas</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CLOUDFLARE SERVICES -->
+<section class="section section-dark" id="cloudflare">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Ecosistema</span>
+      <h2>Servicios de <span class="gradient-text">Cloudflare</span></h2>
+      <p>Lo que necesitas saber de cada producto</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">📄</div>
+        <h3>Pages</h3>
+        <p>Deploy de sitios estáticos y SSR. Git-connected, preview deployments automáticos. <strong>Gratuito ilimitado.</strong></p>
+        <div class="service-tags"><span>JAMstack</span><span>CI/CD</span><span>Free</span></div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">⚡</div>
+        <h3>Workers</h3>
+        <p>Funciones serverless que corren en el edge (300+ ubicaciones). Latencia ultra-baja. <strong>100k req/día gratis.</strong></p>
+        <div class="service-tags"><span>Serverless</span><span>Edge</span><span>JS/WASM</span></div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🗄️</div>
+        <h3>D1</h3>
+        <p>Base de datos SQLite distribuida en el edge. Compatible con libSQL. <strong>5GB gratis.</strong></p>
+        <div class="service-tags"><span>SQLite</span><span>Edge DB</span><span>SQL</span></div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🗝️</div>
+        <h3>KV</h3>
+        <p>Almacén clave-valor global. Ideal para sesiones, caché, configuración distribuida. <strong>100k lecturas/día gratis.</strong></p>
+        <div class="service-tags"><span>Key-Value</span><span>Cache</span><span>Global</span></div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🪣</div>
+        <h3>R2</h3>
+        <p>Object storage compatible con S3. Sin costos de egress (a diferencia de AWS S3). <strong>10GB gratis.</strong></p>
+        <div class="service-tags"><span>S3-compatible</span><span>Sin egress</span></div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🧠</div>
+        <h3>AI Gateway</h3>
+        <p>Proxy para APIs de IA (OpenAI, Anthropic, etc.) con caché, logs y rate limiting. API keys protegidas en el backend.</p>
+        <div class="service-tags"><span>OpenAI</span><span>Proxy</span><span>Logs</span></div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🌐</div>
+        <h3>DNS & CDN</h3>
+        <p>El DNS más rápido del mundo + CDN global. Protege tu origin server y acelera la entrega de contenido.</p>
+        <div class="service-tags"><span>DNS</span><span>CDN</span><span>DDoS</span></div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🛡️</div>
+        <h3>Zero Trust</h3>
+        <p>Acceso seguro sin VPN. Tunnel para exponer servicios locales con SSL automático. Reemplaza VPNs corporativas.</p>
+        <div class="service-tags"><span>Security</span><span>Tunnel</span><span>ZTNA</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CI/CD -->
+<section class="section" id="cicd">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Automatización</span>
+      <h2>CI/CD <span class="gradient-text">Tools</span></h2>
+      <p>Automatiza build, test y deploy con las mejores herramientas</p>
+    </div>
+    <div class="table-wrapper">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th>Herramienta</th>
+            <th>Tipo</th>
+            <th>Config</th>
+            <th>Integración</th>
+            <th>Precio</th>
+            <th>Mejor para</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="highlight-row">
+            <td><strong>⚙️ GitHub Actions</strong></td>
+            <td><span class="tag blue">SaaS</span></td>
+            <td>YAML en repo</td>
+            <td>GitHub nativo</td>
+            <td><span class="tag green">Gratis (2000 min/mes)</span></td>
+            <td>Proyectos en GitHub, open source</td>
+          </tr>
+          <tr>
+            <td><strong>🦊 GitLab CI</strong></td>
+            <td><span class="tag blue">SaaS / Self</span></td>
+            <td>.gitlab-ci.yml</td>
+            <td>GitLab nativo</td>
+            <td><span class="tag green">Gratis básico</span></td>
+            <td>Proyectos en GitLab, self-hosted</td>
+          </tr>
+          <tr>
+            <td><strong>🔵 CircleCI</strong></td>
+            <td><span class="tag blue">SaaS</span></td>
+            <td>YAML en .circleci/</td>
+            <td>GitHub, Bitbucket</td>
+            <td><span class="tag yellow">Freemium</span></td>
+            <td>Pipelines complejos, paralelización</td>
+          </tr>
+          <tr>
+            <td><strong>🏗️ Jenkins</strong></td>
+            <td><span class="tag yellow">Self-hosted</span></td>
+            <td>Jenkinsfile (Groovy)</td>
+            <td>Universal (plugins)</td>
+            <td><span class="tag green">Open Source</span></td>
+            <td>Empresas con infra propia, control total</td>
+          </tr>
+          <tr>
+            <td><strong>🚀 Cloudflare Pages</strong></td>
+            <td><span class="tag blue">SaaS</span></td>
+            <td>Automático con Git</td>
+            <td>GitHub, GitLab</td>
+            <td><span class="tag green">Gratis ilimitado</span></td>
+            <td>Sites y apps modernas, este mismo sitio</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="pipeline-visual">
+      <div class="pipeline-step">
+        <div class="ps-icon">📝</div>
+        <div class="ps-label">git push</div>
+      </div>
+      <div class="pipeline-arrow">→</div>
+      <div class="pipeline-step">
+        <div class="ps-icon">🔨</div>
+        <div class="ps-label">Build</div>
+      </div>
+      <div class="pipeline-arrow">→</div>
+      <div class="pipeline-step">
+        <div class="ps-icon">🧪</div>
+        <div class="ps-label">Test</div>
+      </div>
+      <div class="pipeline-arrow">→</div>
+      <div class="pipeline-step">
+        <div class="ps-icon">🔍</div>
+        <div class="ps-label">Security Scan</div>
+      </div>
+      <div class="pipeline-arrow">→</div>
+      <div class="pipeline-step">
+        <div class="ps-icon">🚀</div>
+        <div class="ps-label">Deploy</div>
+      </div>
+      <div class="pipeline-arrow">→</div>
+      <div class="pipeline-step">
+        <div class="ps-icon">📊</div>
+        <div class="ps-label">Monitor</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTENEDORES -->
+<section class="section section-dark" id="contenedores">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Contenedores</span>
+      <h2>Docker & <span class="gradient-text">Kubernetes</span></h2>
+      <p>La dupla fundamental del DevOps moderno</p>
+    </div>
+    <div class="container-split">
+      <div class="container-side">
+        <div class="cs-header">
+          <span class="cs-icon">🐳</span>
+          <h3>Docker — Empaquetar</h3>
+        </div>
+        <div class="cs-concept">
+          <div class="cs-item">
+            <strong>Imagen</strong>
+            <p>Plantilla inmutable. Se construye con un Dockerfile.</p>
+          </div>
+          <div class="cs-item">
+            <strong>Contenedor</strong>
+            <p>Instancia en ejecución de una imagen. Aislado y portable.</p>
+          </div>
+          <div class="cs-item">
+            <strong>Docker Compose</strong>
+            <p>Define múltiples contenedores en un solo YAML. Para desarrollo local.</p>
+          </div>
+        </div>
+        <div class="code-block">
+          <div class="code-header">Dockerfile esencial</div>
+          <pre><code>FROM node:20-alpine
+WORKDIR /app
+COPY package*.json ./
+RUN npm ci --only=production
+COPY . .
+EXPOSE 3000
+CMD ["node", "index.js"]</code></pre>
+        </div>
+      </div>
+      <div class="container-side">
+        <div class="cs-header">
+          <span class="cs-icon">☸️</span>
+          <h3>Kubernetes — Orquestar</h3>
+        </div>
+        <div class="cs-concept">
+          <div class="cs-item">
+            <strong>Pod</strong>
+            <p>Unidad mínima. 1 o más contenedores que comparten red/disco.</p>
+          </div>
+          <div class="cs-item">
+            <strong>Deployment</strong>
+            <p>Controla cuántas réplicas de un Pod corren y gestiona actualizaciones.</p>
+          </div>
+          <div class="cs-item">
+            <strong>Service</strong>
+            <p>Expone Pods internamente o externamente con una IP estable.</p>
+          </div>
+        </div>
+        <div class="cs-when">
+          <h4>¿Cuándo necesitas K8s?</h4>
+          <ul>
+            <li>✅ Múltiples microservicios (10+)</li>
+            <li>✅ Necesitas auto-scaling</li>
+            <li>✅ Alta disponibilidad crítica</li>
+            <li>❌ Un solo servicio → usa Docker directamente</li>
+            <li>❌ Apps edge → usa Cloudflare Workers</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NOTICIAS TECH -->
+<section class="section" id="noticias">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Hoy en Tech</span>
+      <h2>Noticias & <span class="gradient-text">Motivación</span></h2>
+      <p>Lo que está pasando ahora en el mundo tecnológico</p>
+    </div>
+
+    <div class="motivation-banner">
+      <div class="mb-quote">
+        <div class="mb-icon">💡</div>
+        <blockquote id="motivational-quote">"El mejor momento para aprender DevOps fue hace un año. El segundo mejor momento es hoy."</blockquote>
+        <button class="btn-ghost btn-sm" id="next-quote">Nueva cita →</button>
+      </div>
+      <div class="mb-stats">
+        <div class="mb-stat">
+          <span class="mb-num">$158k</span>
+          <span>Salario promedio DevOps en EEUU</span>
+        </div>
+        <div class="mb-stat">
+          <span class="mb-num">+25%</span>
+          <span>Crecimiento de empleos DevOps 2024-2025</span>
+        </div>
+        <div class="mb-stat">
+          <span class="mb-num">#3</span>
+          <span>Habilidad más demandada en tech</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="news-grid" id="news-grid">
+      <div class="news-loading">
+        <div class="spinner"></div>
+        <p>Cargando últimas noticias de Hacker News...</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="nav-logo">⚡ DevOps<span>World</span></span>
+        <p>Tu guía esencial para el mundo DevOps moderno. Desplegado en Cloudflare Pages.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Secciones</h4>
+        <a href="#roadmap">Roadmap</a>
+        <a href="#lenguajes">Lenguajes</a>
+        <a href="#cloud">Cloud</a>
+        <a href="#cloudflare">Cloudflare</a>
+        <a href="#cicd">CI/CD</a>
+        <a href="#noticias">Noticias</a>
+      </div>
+      <div class="footer-resources">
+        <h4>Recursos esenciales</h4>
+        <a href="https://roadmap.sh/devops" target="_blank" rel="noopener">roadmap.sh/devops</a>
+        <a href="https://developers.cloudflare.com" target="_blank" rel="noopener">Cloudflare Docs</a>
+        <a href="https://docs.docker.com" target="_blank" rel="noopener">Docker Docs</a>
+        <a href="https://kubernetes.io/docs" target="_blank" rel="noopener">K8s Docs</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>⚡ Desplegado en <strong>Cloudflare Pages</strong> con <strong>Astro</strong></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ===== NAV SCROLL =====
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  navbar.classList.toggle('scrolled', window.scrollY > 50);
+});
+
+// ===== HAMBURGER =====
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('nav-links');
+hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('open');
+  hamburger.classList.toggle('active');
+});
+navLinks.querySelectorAll('a').forEach(a => {
+  a.addEventListener('click', () => {
+    navLinks.classList.remove('open');
+    hamburger.classList.remove('active');
+  });
+});
+
+// ===== TABS =====
+document.querySelectorAll('.tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    const tabId = tab.dataset.tab;
+    tab.closest('.section').querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+    tab.closest('.section').querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+    tab.classList.add('active');
+    document.getElementById('tab-' + tabId).classList.add('active');
+  });
+});
+
+// ===== COUNTER ANIMATION =====
+const counters = document.querySelectorAll('.stat-num');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const el = entry.target;
+      const target = parseInt(el.dataset.target);
+      let current = 0;
+      const increment = target / 40;
+      const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) { current = target; clearInterval(timer); }
+        el.textContent = Math.floor(current);
+      }, 30);
+      observer.unobserve(el);
+    }
+  });
+}, { threshold: 0.5 });
+counters.forEach(c => observer.observe(c));
+
+// ===== MOTIVATIONAL QUOTES =====
+const quotes = [
+  '"El mejor momento para aprender DevOps fue hace un año. El segundo mejor momento es hoy."',
+  '"La automatización no reemplaza al ingeniero, lo potencia."',
+  '"Un pipeline bien hecho vale más que mil deployments manuales."',
+  '"Infrastructure as Code: si no está en git, no existe."',
+  '"DevOps no es un rol, es una cultura. Cualquiera puede aprenderla."',
+  '"Falla rápido, aprende más rápido, despliega con confianza."',
+  '"El cloud no es el futuro, ya es el presente. Y Cloudflare es el edge."',
+];
+let qi = 0;
+const quoteEl = document.getElementById('motivational-quote');
+document.getElementById('next-quote').addEventListener('click', () => {
+  qi = (qi + 1) % quotes.length;
+  quoteEl.style.opacity = '0';
+  setTimeout(() => { quoteEl.textContent = quotes[qi]; quoteEl.style.opacity = '1'; }, 300);
+});
+
+// ===== TECH NEWS from Hacker News API (sin API key) =====
+async function loadNews() {
+  const grid = document.getElementById('news-grid');
+  try {
+    const res = await fetch('https://hacker-news.firebaseio.com/v0/topstories.json');
+    const ids = await res.json();
+    const top10 = ids.slice(0, 10);
+    const stories = await Promise.all(
+      top10.map(id => fetch(`https://hacker-news.firebaseio.com/v0/item/${id}.json`).then(r => r.json()))
+    );
+    const filtered = stories.filter(s => s && s.title && s.url);
+    grid.innerHTML = filtered.map(s => `
+      <a href="${s.url}" target="_blank" rel="noopener" class="news-card">
+        <div class="news-meta">
+          <span class="news-source">${new URL(s.url).hostname.replace('www.','')}</span>
+          <span class="news-score">▲ ${s.score || 0}</span>
+        </div>
+        <h4>${s.title}</h4>
+        <div class="news-footer">
+          <span>💬 ${s.descendants || 0} comentarios</span>
+          <span class="news-read">Leer →</span>
+        </div>
+      </a>
+    `).join('');
+  } catch(e) {
+    grid.innerHTML = '<p class="news-error">No se pudieron cargar las noticias. <a href="https://news.ycombinator.com" target="_blank">Ver en Hacker News →</a></p>';
+  }
+}
+loadNews();
+
+// ===== SMOOTH SCROLL =====
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    e.preventDefault();
+    const target = document.querySelector(a.getAttribute('href'));
+    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+});
+
+// ===== SCROLL ANIMATIONS =====
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) entry.target.classList.add('revealed');
+  });
+}, { threshold: 0.1 });
+document.querySelectorAll('.road-card, .service-card, .cloud-card, .cs-item').forEach(el => {
+  el.classList.add('reveal');
+  revealObserver.observe(el);
+});
+</script>
+</body>
+</html>
